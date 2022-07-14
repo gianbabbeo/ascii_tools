@@ -2,15 +2,13 @@
 ###################################
 ### image from argv
 ### convert in ascii art
-### create html, matrix, xml?
+### create print on screen and 
+### create html
 ###################################
 
 from sys import argv
-from typing import Tuple, NewType
-import numpy as np
 import cv2
 
-Pixel = NewType("Pixel", Tuple[int, int, int, int]) #### 4 int per 4 channels 
 CHARACTERS = (' ', '.', '°', '*', 'o', 'O', '#', '@')
 MAX_INTENSITY = 255*4
 HTML_TEMPLATE = """
@@ -50,11 +48,12 @@ def main() -> None:
         ascii += '\n'
 
     #stampa a schermo
-    print(ascii)
+    #print(ascii)
 
     #stampa in html
     html = open(img_name + '.htm', 'w')
     html.write(HTML_TEMPLATE.format(ascii))
+    html.close()
 
 if __name__ == '__main__':
     main()
