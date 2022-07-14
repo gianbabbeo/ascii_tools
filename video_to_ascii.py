@@ -3,9 +3,6 @@
 ### video from argv
 ### convert in ascii art
 ### creates .ascii
-### ---
-### via argv -play
-### plays the ascii video
 ###################################
 
 from sys import argv
@@ -56,7 +53,7 @@ def main() -> None:
             break
 
         #...altrimenti...
-        #### CONVERSIONE E SCRITTURA
+        #### CONVERSIONE E SALVATAGGIO
 
 
 if __name__ == '__main__':
